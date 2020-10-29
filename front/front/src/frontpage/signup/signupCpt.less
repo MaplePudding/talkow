@@ -1,0 +1,69 @@
+#signupCpt{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+
+  &>.signupCptInputOuter{
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1.5em;
+    color: #0092FF;
+    position: relative;
+
+    &>input{
+      position: relative;
+      width: 60%;
+      height: 100%;
+      outline: none;
+      border: none;
+      font-size: 1.2em;
+      color: #0092FF;
+    }
+  }
+
+  &>.signupCptInputOuter::after{
+    content: "";
+    height: 5%;
+    width: 0;
+    position: absolute;
+    left: 36%;
+    top: 100%;
+    background: #0092FF;
+    transition: width 0.3s cubic-bezier(.21,.84,.72,.83);
+  }
+
+  &>.signupCptInputOuter:hover::after{
+    transition: width 0.3s cubic-bezier(.21,.84,.72,.83);
+    width: 65%;
+  }
+
+  &>#signupBtn{
+    width: 80%;
+    height: 10%;
+    cursor: pointer;
+    background: #4DE288;
+    outline: none;
+    border: none;
+    color: #FFFFFF;
+    font-size: 1.1em;
+  }
+}
+
+#signupTips{
+  height: 10%;
+  color: red;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hiddenSignupTip{
+  visibility: hidden;
+}

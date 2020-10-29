@@ -1,0 +1,67 @@
+#loginCpt {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+#loginCpt > .loginCptInputOuter {
+  width: 90%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 1.5em;
+  color: #0092FF;
+  position: relative;
+}
+#loginCpt > .loginCptInputOuter > input {
+  position: relative;
+  width: 60%;
+  height: 100%;
+  outline: none;
+  border: none;
+  font-size: 1.2em;
+  color: #0092FF;
+}
+#loginCpt > .loginCptInputOuter > div {
+  width: 0;
+  height: 2%;
+  background: #0092FF;
+}
+#loginCpt > .loginCptInputOuter::after {
+  content: "";
+  height: 5%;
+  width: 0;
+  position: absolute;
+  left: 36%;
+  top: 100%;
+  background: #0092FF;
+  transition: width 0.3s cubic-bezier(0.21, 0.84, 0.72, 0.83);
+}
+#loginCpt > .loginCptInputOuter:hover::after {
+  transition: width 0.3s cubic-bezier(0.21, 0.84, 0.72, 0.83);
+  width: 65%;
+}
+#loginCpt > #loginBtn {
+  width: 80%;
+  height: 10%;
+  cursor: pointer;
+  background: #4DE288;
+  outline: none;
+  border: none;
+  color: #FFFFFF;
+  font-size: 1.1em;
+}
+#loginTips {
+  height: 10%;
+  color: red;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.hiddenLoginTip {
+  visibility: hidden;
+}
+/*# sourceMappingURL=loginCpt.css.map */
