@@ -5,6 +5,7 @@ import './loginCpt.css'
 function LoginCpt(){
     let [userName, setUserName] = useState("");
     let [password, setPwd] = useState("");
+    let [errorFlag, setErrorFlag] = useState(false);
 
     function changeUserName(userName){
         setUserName(userName);
@@ -14,38 +15,56 @@ function LoginCpt(){
         setPwd(password);
     }
 
-    function changeTipVby_1(){
+    function changeTipVby_1(flag){
+        setErrorFlag(flag)
+    }
+
+    function changeTipVby_2(){
         if(userName === "" || password === ""){
             return true;
         }
         return false;
     }
 
-    function changeTipVby_2(){
+    function login(userName, password){
         console.log(userName)
-        if(userName === "" || password === ""){
-            return true;
+        if(userName !== "" && password !== "" && userName.length < 20 && password.length < 20){
+            Axios({
+                method: 'get',
+                url: '/api/login',
+                params:{
+                    userName: userName,
+                    pwd: password
+                }
+            }).then((res) =>{
+                if(res.data){
+
+                }else{
+                    changeTipVby_1(true);
+                }
+            })
         }
-        return false;
     }
+
+
 
     return(
         <div id="loginCpt">
             <div className="loginCptInputOuter">
-                username:<input onChange={event => changeUserName(event.target.value)}/>
+                username:<input onChange={event => {changeUserName(event.target.value); changeTipVby_1(false)}}/>
             </div>
             <div className="loginCptInputOuter">
-                password:<input onChange={event => changePwd((event.target.value))}/>
+                password:<input onChange={event => {changePwd(event.target.value); changeTipVby_1(false)}}/>
             </div>
             <div id="loginTips">
-                <div className="loginTip" >
+                <div className={!errorFlag ? "hiddenLoginTip loginTip" : "loginTip"} >
                     username or password error
                 </div>
                 <div className={changeTipVby_2() === false ? "hiddenLoginTip loginTip" : "loginTip"}>
                     username or password can not be empty
                 </div>
             </div>
-            <button id="loginBtn">Login</button>
+            <button id="loginBtn" onClick={() =>login(userName, password)}>Login</button>
         </div>
     )
 }

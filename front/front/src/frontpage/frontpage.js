@@ -1,6 +1,5 @@
 import React,{useState} from 'react'
 import {HashRouter as Router, Route, Link, Redirect} from 'react-router-dom'
-import {Row, Col} from 'antd'
 import LoginCpt from './login/loginCpt'
 import SignupCpt from './signup/signupCpt'
 import './frontpage.css'
