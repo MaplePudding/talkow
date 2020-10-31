@@ -2,7 +2,9 @@ import React, {useState}from 'react'
 import Axios from 'axios'
 import './loginCpt.css'
 
-function LoginCpt(){
+function LoginCpt(props){
+
+    console.log(props)
     let [userName, setUserName] = useState("");
     let [password, setPwd] = useState("");
     let [errorFlag, setErrorFlag] = useState(false);
@@ -38,7 +40,7 @@ function LoginCpt(){
                 }
             }).then((res) =>{
                 if(res.data){
-
+                    props.history.push('/home')
                 }else{
                     changeTipVby_1(true);
                 }

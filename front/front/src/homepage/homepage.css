@@ -1,0 +1,98 @@
+#homePage {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+#homePage #homePageLeft {
+  width: 20%;
+  height: 100%;
+  margin: 0;
+}
+#homePage #homePageLeft #avatar {
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#homePage #homePageLeft #avatar img {
+  height: 100%;
+  animation: avatarAni 8s infinite linear;
+}
+@keyframes avatarAni {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+#homePage #homePageLeft #homePageMenu {
+  width: 100%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  border: 1px solid #F0F0F0;
+}
+#homePage #homePageLeft #homePageMenu .homePageMenuItemChecked {
+  height: 15%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  cursor: pointer;
+  background: #0092FF;
+  transition: background 0.5s ease-in;
+  border-bottom: 1px solid #F0F0F0;
+}
+#homePage #homePageLeft #homePageMenu .homePageMenuItemChecked img {
+  height: 75%;
+}
+#homePage #homePageLeft #homePageMenu .homePageMenuItemChecked a {
+  color: #FFFFFF;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 1.7em;
+}
+#homePage #homePageLeft #homePageMenu .homePageMenuItem {
+  height: 15%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  cursor: pointer;
+  transition: background 0.5s ease-in;
+  border-bottom: 1px solid #F0F0F0;
+}
+#homePage #homePageLeft #homePageMenu .homePageMenuItem img {
+  height: 75%;
+}
+#homePage #homePageLeft #homePageMenu .homePageMenuItem a {
+  color: #0092FF;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 1.5em;
+}
+#homePage #homePageLeft #homePageMenu .homePageMenuItem:hover {
+  background: #E6F7FF;
+  transition: background 0.5s ease-in;
+}
+#homePage #homePageRight {
+  width: 80%;
+  height: 100%;
+}
+/*# sourceMappingURL=homepage.css.map */
