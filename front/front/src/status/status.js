@@ -1,5 +1,6 @@
 let status = {
     userStatus: false,
+    userName: "",
 
     getUserStatus: function(){
         return this.userStatus;
@@ -7,6 +8,14 @@ let status = {
 
     changeUserStatus: function(){
         this.userStatus === false ? this.userStatus = true : this.userStatus = false;
+    },
+
+    getUserName: function(){
+        return this.userName;
+    },
+
+    changeUserName: function(userName){
+        this.userName = userName;
     }
 }
 

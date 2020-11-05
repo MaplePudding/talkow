@@ -1,10 +1,10 @@
 import React, {useState}from 'react'
+import Status from '../../status/status'
 import Axios from 'axios'
 import './loginCpt.css'
 
 function LoginCpt(props){
 
-    console.log(props)
     let [userName, setUserName] = useState("");
     let [password, setPwd] = useState("");
     let [errorFlag, setErrorFlag] = useState(false);
@@ -29,7 +29,6 @@ function LoginCpt(props){
     }
 
     function login(userName, password){
-        console.log(userName)
         if(userName !== "" && password !== "" && userName.length < 20 && password.length < 20){
             Axios({
                 method: 'get',
@@ -40,7 +39,9 @@ function LoginCpt(props){
                 }
             }).then((res) =>{
                 if(res.data){
-                    props.history.push('/home')
+                    Status.changeUserName(userName);
+                    Status.changeUserStatus();
+                    props.setRenderFlag(true);
                 }else{
                     changeTipVby_1(true);
                 }

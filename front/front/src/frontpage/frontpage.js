@@ -14,7 +14,9 @@ function changeNaviStyle(naviStyleFlag, setNaviStyleFlag, itemName){
     }
 }
 
-function FrontPage(){
+function FrontPage(props){
+
+    const _props = props
 
     let [naviStyleFlag, setNaviStyleFlag] = useState(false);
 
@@ -29,7 +31,7 @@ function FrontPage(){
                     <Router>
                         <div>
                             <Redirect path="/front" to="/front/login"/>
-                            <Route path="/front/login" component={LoginCpt}/>
+                            <Route path="/front/login" render={props => <LoginCpt setRenderFlag={_props.setRenderFlag}/>}/>
                             <Route path="/front/signup" component={SignupCpt}/>
                         </div>
                     </Router>
