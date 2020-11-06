@@ -1,0 +1,78 @@
+#searchCpt {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#searchCpt #searchUser {
+  width: 100%;
+  height: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#searchCpt #searchUser > #searchUserInner {
+  width: 50%;
+  height: 20%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+#searchCpt #searchUser > #searchUserInner > input {
+  height: 100%;
+  width: 70%;
+  border: none;
+  outline: none;
+  color: #0092FF;
+  font-size: 2em;
+  border-bottom: 2px solid #0092FF;
+}
+#searchCpt #searchUser > #searchUserInner > input:focus {
+  outline: none;
+}
+#searchCpt #searchUser > #searchUserInner > button {
+  width: 20%;
+  height: 100%;
+  display: flex;
+  border: none;
+  outline: none;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  cursor: pointer;
+}
+#searchCpt #searchUser > #searchUserInner > button > img {
+  height: 100%;
+}
+#searchCpt #searchUser > #searchUserInner > button > img:focus {
+  border: none;
+  outline: none;
+}
+#searchCpt #searchUser > #searchUserInner > button:focus {
+  outline: none;
+  border: none;
+}
+#searchCpt #searchRes {
+  width: 100%;
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+#searchCpt #searchRes .searchResInner {
+  width: 100%;
+  height: 15%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#searchCpt #searchRes::-webkit-scrollbar {
+  display: none;
+}
+/*# sourceMappingURL=searchCpt.css.map */

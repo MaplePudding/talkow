@@ -13,4 +13,13 @@ export class UserEntity{
 
   @Column({length: 20})
   email: string;
+
+  @Column({length: 500, default: ""})
+  friends: string;
+
+  @Column({length: 500, default: ""})
+  groups: string;
+
+  @Column({length: 500, default: ""})
+  notice: string;
 }

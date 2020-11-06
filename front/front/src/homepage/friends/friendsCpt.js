@@ -38,7 +38,7 @@ function FriendsCpt(){
             <div id="friendsListOuter">
 
             </div>
-            <div id="friendsChat">
+            <div id="friendsChatOuter">
 
             </div>
         </div>

@@ -11,5 +11,4 @@ import { UserLoginService } from './user.loginService';
   controllers: [UserSignupController, UserLoginController],
   providers:[UserSignupService, UserLoginService]
 })
-
 export class UserModule {}

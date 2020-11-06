@@ -16,7 +16,7 @@ import Status from '../status/status'
             })
 
             this.ws.on("revMsg", function(event){
-                console.log(event.data)
+                console.log(event.data);
             })
 
             if(!this.timer){
